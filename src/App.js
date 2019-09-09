@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Hoge from "./component/hoge";
+import TimerComponent from "./component/TimerComponent";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>こんにちは</h1>
         <Hoge />
+        <TimerComponent />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
