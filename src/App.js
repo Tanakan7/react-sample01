@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Hoge from "./component/hoge";
+import Hoge from "./component/Hoge";
 import TimerComponent from "./component/TimerComponent";
 
 function App() {

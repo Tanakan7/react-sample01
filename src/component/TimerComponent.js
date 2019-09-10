@@ -4,8 +4,9 @@ import { Timer } from 'easytimer.js';
 class TimerComponent extends React.Component {
   constructor(props) {
     super(props)
+    this.timer1 = new Timer();
+
     this.state = {
-      timer1: new Timer(),
       timerValue: '',
       str: 'サンプル',
     }
@@ -13,10 +14,10 @@ class TimerComponent extends React.Component {
 
   componentDidMount() {
     console.log('componentDidMount');
-    this.state.timer1.start();
-    this.state.timer1.addEventListener('secondsUpdated', () => {
+    this.timer1.start();
+    this.timer1.addEventListener('secondsUpdated', () => {
       this.setState({
-        timerValue: this.state.timer1.getTimeValues().toString()
+        timerValue: this.timer1.getTimeValues().toString()
       })
     })
   }
