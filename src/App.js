@@ -4,6 +4,7 @@ import './App.css';
 
 import Hoge from "./component/Hoge";
 import TimerComponent from "./component/TimerComponent";
+import CountDown from "./component/CountDown";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <h1>こんにちは</h1>
         <Hoge />
         <TimerComponent />
+        <CountDown />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
