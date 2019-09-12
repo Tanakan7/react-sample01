@@ -1,6 +1,8 @@
 import React from 'react';
 import { Timer } from 'easytimer.js';
 
+import TimerChild from "./TimerChild";
+
 class TimerComponent extends React.Component {
   constructor(props) {
     super(props)
@@ -25,6 +27,7 @@ class TimerComponent extends React.Component {
     return (
       <div className='wrap'>
         <p id='js-countup'>{this.state.timerValue}</p>
+        <TimerChild val={this.state.timerValue} />
       </div>
     )
   }
