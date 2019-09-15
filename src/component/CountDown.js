@@ -8,6 +8,7 @@ class CountDown extends React.Component {
 
     this.state = {
       timerValue: '',
+      milliSecond: '',
       str: 'サンプル',
     }
 
@@ -16,11 +17,20 @@ class CountDown extends React.Component {
 
   componentDidMount() {
     console.log('componentDidMount CountDonw');
-    this.timer1.start({ countdown: true, startValues: { seconds: 10 } });
-    this.timer1.addEventListener('secondsUpdated', () => {
+    this.timer1.start({
+      precision: 'secondTenths',
+      countdown: true,
+      startValues: { seconds: 10 },
+    });
+    this.timer1.addEventListener('secondTenthsUpdated', () => {
       this.setState({
-        timerValue: this.timer1.getTimeValues().toString()
-      })
+        timerValue: this.timer1
+          .getTimeValues()
+          .toString(["minutes", "seconds"]),
+        milliSecond: this.timer1
+          .getTimeValues()
+          .toString(['secondTenths']),
+      });
     })
 
     this.timer1.addEventListener('targetAchieved', () => {
@@ -29,8 +39,6 @@ class CountDown extends React.Component {
   }
 
   _stopCountDown() {
-    // this._stopCountDown = this._stopCountDown.bind(this) コンストラクタでこれやってないとエラー
-    // this.なんとか のなかで this.ほげほげ を呼び出すときは必要っぽい？
     if (this.timer1.isRunning()) {
       this.timer1.pause();
     } else {
@@ -42,6 +50,7 @@ class CountDown extends React.Component {
     return (
       <div className='wrap'>
         <p>{this.state.timerValue}</p>
+        <p>{this.state.milliSecond}</p>
         <button onClick={this._stopCountDown}>ストップ</button>
       </div>
     )
