@@ -4,6 +4,7 @@ import './App.css';
 
 import Hoge from "./component/Hoge";
 import Ref from "./component/Ref";
+import Flow from "./component/Flow";
 // import TimerComponent from "./component/TimerComponent";
 // import CountDown from "./component/CountDown";
 
@@ -15,6 +16,7 @@ function App() {
         <Hoge />
         <Ref val="first" />
         <Ref val="second" />
+        <Flow val="first" />
         {/* <TimerComponent />
         <CountDown /> */}
         {/* <p>
