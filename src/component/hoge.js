@@ -1,6 +1,5 @@
 import React from 'react';
 import Fuga from "./Fuga";
-import { thisExpression } from '@babel/types';
 
 class Hoge extends React.Component {
   constructor(props) {
@@ -14,7 +13,7 @@ class Hoge extends React.Component {
 
   _handleClick() {
     this.setState({
-      val: this.state.val += 1,
+      val: this.state.val + 1,
     })
   }
 

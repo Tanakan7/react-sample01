@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import Hoge from "./component/Hoge";
-import TimerComponent from "./component/TimerComponent";
-import CountDown from "./component/CountDown";
+// import TimerComponent from "./component/TimerComponent";
+// import CountDown from "./component/CountDown";
 
 function App() {
   return (
