@@ -26,7 +26,9 @@ class TimerComponent extends React.Component {
   render() {
     return (
       <div className='wrap'>
+        <p>Timerコンポーネント</p>
         <p id='js-countup'>{this.state.timerValue}</p>
+        <p>TimerChildコンポーネント(親のもつtime(state)を受け継ぐ)</p>
         <TimerChild val={this.state.timerValue} />
       </div>
     )

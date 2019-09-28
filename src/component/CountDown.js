@@ -16,12 +16,13 @@ class CountDown extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount CountDonw');
+    // カウントダウンタイマー開始
     this.timer1.start({
       precision: 'secondTenths',
       countdown: true,
       startValues: { seconds: 10 },
     });
+    // 100msおきに実行される処理を設定
     this.timer1.addEventListener('secondTenthsUpdated', () => {
       this.setState({
         timerValue: this.timer1
@@ -49,9 +50,8 @@ class CountDown extends React.Component {
   render() {
     return (
       <div className='wrap'>
-        <p>{this.state.timerValue}</p>
-        <p>{this.state.milliSecond}</p>
-        <button onClick={this._stopCountDown}>ストップ</button>
+        <p>{this.state.timerValue}.{this.state.milliSecond}</p>
+        <button onClick={this._stopCountDown}>ポーズ・再開</button>
       </div>
     )
   }

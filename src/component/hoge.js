@@ -20,7 +20,7 @@ class Hoge extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <p>state.val: {this.state.val}</p>
+        <p>Hogeコンポーネントのstate.val: {this.state.val}</p>
         <button onClick={this._handleClick}>Hogeボタン</button>
         {/* 値のときはダブルクオート、関数は{}で()なし */}
         <Fuga

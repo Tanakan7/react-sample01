@@ -9,14 +9,13 @@ class Ref extends React.Component {
   }
 
   _handleClick() {
-    console.log(this.myRef.current);
+    console.log('クリックされたコンポーネントのDOM→', this.myRef.current);
   }
 
   render() {
     return (
       <React.Fragment>
-        <p>Refコンポーネント</p>
-        <p ref={this.myRef}>{this.props.val}</p>
+        <p ref={this.myRef}>Refコンポーネント: {this.props.val}</p>
         <button onClick={this._handleClick}>Refボタン</button>
       </React.Fragment>
     );

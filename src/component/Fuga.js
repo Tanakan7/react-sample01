@@ -16,7 +16,7 @@ class Fuga extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <p>Fugaコンポーネント</p>
+        <p>Fugaコンポーネント(ボタン押下でHogeのStateを変更する)</p>
         <button onClick={this._handleClick}>Fugaボタン</button>
       </React.Fragment>
     )
