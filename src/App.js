@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 // import Hoge from "./component/Hoge";
+import Foo from "./component/Foo";
 // import Ref from "./component/Ref";
 // import Flow from "./component/Flow";
 // import TimerComponent from "./component/TimerComponent";
@@ -18,6 +19,7 @@ function App() {
         <Ref val="second" />
         <Flow val="first" /> */}
         {/* <TimerComponent /> */}
+        <Foo />
         <CountDown />
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
