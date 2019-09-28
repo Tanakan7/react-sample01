@@ -2,6 +2,7 @@
   "name": "quick-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tanakan7.github.io/react-sample01/",
   "dependencies": {
     "easytimer.js": "^4.0.1",
     "flow-bin": "^0.107.0",
@@ -14,7 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "flow": "flow"
+    "flow": "flow",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
